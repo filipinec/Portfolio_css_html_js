@@ -26,7 +26,7 @@
      <li><a href="#section--1">About</a></li>
      <li><a href="#section--2">Expirience</a></li>
      <li><a href="#section--3">Projects</a></li>
-     <li><a href="#section--4">Constact</a></li>
+     <li><a href="#section--4" class="btn-show-modal">Constact</a></li>
     </ul>
    </div>
   </nav>
@@ -46,7 +46,7 @@
      <li><a onclick="toggleMenu()" href="#section--1">About</a></li>
      <li><a onclick="toggleMenu()" href="#section--2">Expirience</a></li>
      <li><a onclick="toggleMenu()" href="#section--3">Projects</a></li>
-     <li><a onclick="toggleMenu()" href="#section--4">Constact</a></li>
+     <li><a onclick="toggleMenu()" href="#section--4" class="btn-show-modal">Constact</a></li>
     </div>
    </div>
   </nav>
@@ -59,11 +59,29 @@
         Hello everybody!<br />
         <!-- Green highlight effect -->
         I'm <span class="highlight">Filip Tasevski</span>
-        <br />Frontend
-        <span class="highlight">Developer</span>
+        <br /><span class="highlight">Frontend</span>
+        Developer
       </h1>
     </div>
   </div>
+  <div class="modal hidden">
+    <button class="btn-close-modal">&times;</button>
+    <h2 class="modal__header">
+     Contact <span class="highlight">Me</span>
+    </h2>
+    <form class="modal__form">
+      <label>First Name</label>
+      <input type="text" />
+      <label>Last Name</label>
+      <input type="text" />
+      <label>Email Address</label>
+      <input type="email" />
+      <label>Message</label>
+      <textarea name="textarea-1" placeholder="Enter your message" id="textarea-1-field" class="textarea-1" cols="30" rows="6" maxlength="180"></textarea>
+      <button class="btn">Submit</button>
+    </form>
+  </div>
+  <div class="overlay hidden"></div>
   <script src="script.js"></script>
  </body>
 </html>
