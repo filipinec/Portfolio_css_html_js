@@ -20,12 +20,6 @@ h1 {
  font-weight: 300;
 }
 
-/* TRANSITION */
-a,
-.btn {
- transition: all 0.3s ease;
-}
-
 /* NAVIGATION */
 nav,
 .nav-links {
@@ -234,6 +228,17 @@ a:hover {
  border: 1px solid #ddd;
  border-radius: 0.5rem;
 }
+.modal__form input:focus-visible,
+.modal__form textarea:focus-visible {
+ outline: 2px solid#f17c1e;
+ border-radius: 3px;
+}
+
+select:focus-visible {
+ border: 2px dashed #f17c1e;
+ border-radius: 3px;
+ outline: none;
+}
 
 .modal__form button {
  grid-column: 1 / span 2;
@@ -242,12 +247,13 @@ a:hover {
  width: 200px;
  height: 50px;
  font-weight: 500;
- border-radius: 3%;
  background-color: #f17c1e;
  color: white;
  opacity: 0.8;
- transition: all 0.3s;
  border: none;
+ font-size: 20px;
+ border-radius: 5%;
+ font-family: "Poppins", sans-serif;
 }
 .modal__form button:hover {
  opacity: 1;

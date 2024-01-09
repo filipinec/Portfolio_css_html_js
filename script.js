@@ -35,3 +35,5 @@ document.addEventListener("keydown", function (e) {
   closeModal();
  }
 });
+
+setTimeout(() => {}, "1000");
