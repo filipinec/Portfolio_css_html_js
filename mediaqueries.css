@@ -5,4 +5,24 @@
  #hamburger-nav {
   display: flex;
  }
+ .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+ .img-container {
+  text-align: center;
+  width: 100%;
+ }
+ .img-container img {
+  width: 800px;
+  padding-left: 50px;
+  padding-top: 50px;
+ }
+ .text-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+ }
 }
