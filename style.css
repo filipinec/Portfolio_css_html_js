@@ -24,7 +24,7 @@ html {
  --gradient-primary: linear-gradient(to top left, #f17c1e, #ffcb03);
 }
 p {
- color: var(--color-secondary);
+ color: var(--color-tertiary);
 }
 h1 {
  color: var(--color-tertiary);
