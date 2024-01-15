@@ -387,12 +387,14 @@ select:focus-visible {
 }
 .link-to {
  display: flex;
- font-size: 2.5rem;
  align-items: center;
 }
+
 .link-to a {
  margin: 1rem;
+ font-size: 2.5rem;
 }
+
 .link-to button {
  height: 4rem;
  width: 10rem;
