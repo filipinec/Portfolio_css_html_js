@@ -304,5 +304,9 @@ select:focus-visible {
 
  transition: transform 1s, opacity 1s;
 }
+.section-container {
+ display: flex;
+ flex-direction: column;
+}
 
 /* //////////////////////////////////// */
