@@ -62,12 +62,13 @@ a:hover {
 .btn {
  display: inline-block;
  background-color: var(--color-primary);
- font-size: 1.6rem;
+ font-size: 1.4rem;
  font-family: inherit;
  font-weight: 500;
  border: none;
  border-radius: 10rem;
  cursor: pointer;
+ padding: 1rem;
 }
 
 /* lOGO */
@@ -268,15 +269,15 @@ select:focus-visible {
  justify-self: center;
  margin-top: 1rem;
  width: 200px;
- height: 50px;
+ height: 80px;
  font-weight: 500;
  background-color: var(--color-primary);
  color: white;
  opacity: 0.8;
  border: none;
- font-size: 1.2rem;
- border-radius: 5%;
+ font-size: 1.3rem;
  font-family: "Poppins", sans-serif;
+ padding: 1rem;
 }
 .modal__form button:hover {
  opacity: 1;
@@ -385,7 +386,27 @@ select:focus-visible {
  font-size: 1.4rem;
 }
 .link-to {
- font-size: 2rem;
+ display: flex;
+ font-size: 2.5rem;
+ align-items: center;
 }
 .link-to a {
+ margin: 1rem;
+}
+.link-to button {
+ height: 4rem;
+ width: 10rem;
+ font-size: 1.1rem;
+ background-color: var(--color-tertiary);
+ color: #fff;
+ font-family: "Poppins";
+ border: none;
+ padding: 1rem;
+ border-radius: 1rem;
+ margin-left: 1rem;
+ transition: 1 ease-in-out;
+}
+.link-to button:hover {
+ opacity: 0.8;
+ background-color: var(--color-primary);
 }
