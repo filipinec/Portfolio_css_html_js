@@ -384,3 +384,8 @@ select:focus-visible {
  color: var(--color-primary);
  font-size: 1.4rem;
 }
+.link-to {
+ font-size: 2rem;
+}
+.link-to a {
+}
