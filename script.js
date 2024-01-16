@@ -34,3 +34,27 @@ document.addEventListener("keydown", function (e) {
   closeModal();
  }
 });
+
+/////////////////////////////////
+
+// Divide duplicates and non-duplicates number
+
+let arr = [1, 2, 3, 4, 5, 2, 6, 3, 7, 8, 8];
+let duplicates = [];
+let otherNumber = [];
+
+arr.forEach(function (value, index, array) {
+ if (
+  array.indexOf(value, index + 1) !== -1 &&
+  duplicates.indexOf(value) === -1
+ ) {
+  duplicates.push(value);
+ } else {
+  otherNumber.push(value);
+ }
+});
+
+// Result: [2, 3, 8]
+console.log("Duplicate values:", duplicates);
+// Result: [1, 4, 5, 2, 6, 3, 7, 8]
+console.log("Non-Duplicate values:", otherNumber);
