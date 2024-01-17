@@ -58,11 +58,3 @@ document.addEventListener("keydown", function (e) {
 // console.log("Duplicate values:", duplicates);
 // // Result: [1, 4, 5, 2, 6, 3, 7, 8]
 // console.log("Non-Duplicate values:", otherNumber);
-
-const arr = [2, 3, 5, 7, 34, 2, 5, 9, 1];
-let duplicates = [];
-let nonDuplicates = [];
-
-arr.forEach(function (value, index, arr) {
- console.log(value, index + 1);
-});
