@@ -437,25 +437,9 @@ select:focus-visible {
  display: inline-block;
 }
 
-.operations__tab--1 {
- background-color: var(--color-secondary);
-}
-
-.operations__tab--1:hover {
- background-color: var(--color-secondary-darker);
-}
-
-.operations__tab--3 {
- background-color: var(--color-tertiary);
- margin: 0;
-}
-
-.operations__tab--3:hover {
- background-color: var(--color-tertiary-darker);
-}
-
 .operations__tab--active {
  transform: translateY(-66%);
+ background-color: var(--color-primary);
 }
 
 .operations__content {
@@ -464,6 +448,13 @@ select:focus-visible {
  /* JUST PRESENTATIONAL */
  font-size: 1.7rem;
  padding: 2.5rem 7rem 6.5rem 7rem;
+}
+
+.btn-tab {
+ padding: 20px;
+ font-size: 1.5rem;
+ font-weight: 400;
+ border: none;
 }
 
 .operations__content--active {
