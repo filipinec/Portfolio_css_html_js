@@ -34,7 +34,6 @@ document.addEventListener("keydown", function (e) {
   closeModal();
  }
 });
-
 // Tabbed component
 const tabs = document.querySelectorAll(".operations__tab");
 const tabsContainer = document.querySelector(".operations__tab-container");
@@ -60,7 +59,6 @@ tabsContainer.addEventListener("click", function (e) {
   .querySelector(`.operations__content--${clicked.getAttribute("data-tab")}`)
   .classList.add("operations__content--active");
 });
-
 // /////////////////////////////////
 
 // // Divide duplicates and non-duplicates number
