@@ -1,16 +1,3 @@
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-
-body {
- font-family: "Poppins", sans-serif;
-}
-html {
- scroll-behavior: smooth;
-}
-
 :root {
  --color-primary: #f17c1e;
  --color-secondary: #ffcb03;
@@ -22,6 +9,20 @@ html {
  --color-secondary-opacity: #ffcd0331;
  --color-tertiary-opacity: #ff58602d;
  --gradient-primary: linear-gradient(to top left, #f17c1e, #ffcb03);
+ --changeCSS: 0;
+ --changeHTML: 0;
+}
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: "Poppins", sans-serif;
+}
+html {
+ scroll-behavior: smooth;
 }
 p {
  color: var(--color-tertiary);
@@ -363,7 +364,7 @@ select:focus-visible {
  padding: 30px;
 }
 .detail-container h3 {
- font-size: 1.5rem;
+ font-size: 1.1rem;
  color: var(--color-tertiary);
  margin-bottom: 15px;
  margin-left: 25px;
@@ -458,8 +459,6 @@ select:focus-visible {
 
 .operations__content--active {
  display: flex;
-
- background-color: red;
  height: 300px;
  width: 50px;
 }
@@ -472,4 +471,76 @@ select:focus-visible {
 
 .operations__content p {
  grid-column: 2;
+}
+
+/* PROGRESS BAR */
+.skill {
+ margin: 20px;
+ width: 160px;
+ height: 160px;
+ position: relative;
+}
+
+.outer {
+ height: 160px;
+ width: 160px;
+ border-radius: 50%;
+ padding: 20px;
+ box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+  6px 6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+ height: 120px;
+ width: 120px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+  inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+  -0.5px -0.5px 0px rgba(255, 255, 255, 0.1),
+  0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+.html-block circle {
+ fill: none;
+ stroke: url(#GradientColor);
+ stroke-width: 20px;
+ stroke-dasharray: 436;
+ stroke-dashoffset: 436;
+ animation: animHTML 2s linear forwards;
+}
+
+.html-block svg {
+ position: absolute;
+ top: 0;
+ left: 0;
+ transform: rotate(-90deg);
+}
+.css-block circle {
+ fill: none;
+ stroke: url(#GradientColor);
+ stroke-width: 20px;
+ stroke-dasharray: 436;
+ stroke-dashoffset: 436;
+ animation: animCSS 2s linear forwards;
+}
+.css-block svg {
+ position: absolute;
+ top: 0;
+ left: 0;
+ transform: rotate(-90deg);
+}
+
+@keyframes animHTML {
+ 100% {
+  stroke-dashoffset: var(--changeHTML);
+ }
+}
+
+@keyframes animCSS {
+ 100% {
+  stroke-dashoffset: var(--changeCSS);
+ }
 }
