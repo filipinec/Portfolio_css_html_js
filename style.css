@@ -384,7 +384,7 @@ select:focus-visible {
 }
 .picture-container img {
  /* width: 20px; */
- border-radius: 7%;
+ border-radius: 50%;
  color: var(--color-primary);
 }
 .about-container {
