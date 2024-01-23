@@ -67,8 +67,10 @@ const progressBar = function (skillId, numOfCircle, num, timeForLoad) {
  let counter = 0;
  let intervalId;
 
- root.style.setProperty("--changeHTML", numOfCircle + 219);
+ root.style.setProperty("--changeHTML", numOfCircle + 45);
  root.style.setProperty("--changeCSS", numOfCircle + 106);
+ root.style.setProperty("--changeJS", numOfCircle + 153);
+ root.style.setProperty("--changeREACT", numOfCircle + 106);
 
  intervalId = setInterval(() => {
   if (counter == num) {
@@ -80,8 +82,10 @@ const progressBar = function (skillId, numOfCircle, num, timeForLoad) {
  }, timeForLoad);
 };
 
-progressBar("skill-1", 0, 50, 40);
-progressBar("skill-2", 0, 75, 27);
+progressBar("skill-1", 0, 90, 17);
+progressBar("skill-2", 0, 75, 20);
+progressBar("skill-3", 0, 65, 27);
+progressBar("skill-4", 0, 75, 27);
 
 // /////////////////////////////////
 

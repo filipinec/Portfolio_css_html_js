@@ -11,6 +11,8 @@
  --gradient-primary: linear-gradient(to top left, #f17c1e, #ffcb03);
  --changeCSS: 0;
  --changeHTML: 0;
+ --changeJS: 0;
+ --changeREACT: 0;
 }
 * {
  margin: 0;
@@ -325,7 +327,7 @@ select:focus-visible {
 .section-container {
  display: flex;
  margin-top: 3rem;
- gap: 4rem;
+ /* gap: 2rem; */
  height: 80%;
  justify-content: center;
 }
@@ -416,7 +418,7 @@ select:focus-visible {
 /* OPERATIONS */
 .operations {
  max-width: 100rem;
- margin: 12rem auto 0 auto;
+ margin: 6rem auto 0 auto;
 
  background-color: #fff;
 }
@@ -532,6 +534,34 @@ select:focus-visible {
  left: 0;
  transform: rotate(-90deg);
 }
+.js-block circle {
+ fill: none;
+ stroke: url(#GradientColor);
+ stroke-width: 20px;
+ stroke-dasharray: 436;
+ stroke-dashoffset: 436;
+ animation: animJS 2s linear forwards;
+}
+.js-block svg {
+ position: absolute;
+ top: 0;
+ left: 0;
+ transform: rotate(-90deg);
+}
+.react-block circle {
+ fill: none;
+ stroke: url(#GradientColor);
+ stroke-width: 20px;
+ stroke-dasharray: 436;
+ stroke-dashoffset: 436;
+ animation: animREACT 2s linear forwards;
+}
+.react-block svg {
+ position: absolute;
+ top: 0;
+ left: 0;
+ transform: rotate(-90deg);
+}
 
 @keyframes animHTML {
  100% {
@@ -540,6 +570,16 @@ select:focus-visible {
 }
 
 @keyframes animCSS {
+ 100% {
+  stroke-dashoffset: var(--changeCSS);
+ }
+}
+@keyframes animJS {
+ 100% {
+  stroke-dashoffset: var(--changeCSS);
+ }
+}
+@keyframes animREACT {
  100% {
   stroke-dashoffset: var(--changeCSS);
  }
