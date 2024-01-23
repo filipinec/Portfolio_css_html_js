@@ -576,11 +576,11 @@ select:focus-visible {
 }
 @keyframes animJS {
  100% {
-  stroke-dashoffset: var(--changeCSS);
+  stroke-dashoffset: var(--changeJS);
  }
 }
 @keyframes animREACT {
  100% {
-  stroke-dashoffset: var(--changeCSS);
+  stroke-dashoffset: var(--changeREACT);
  }
 }
