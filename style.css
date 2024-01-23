@@ -2,12 +2,6 @@
  --color-primary: #f17c1e;
  --color-secondary: #ffcb03;
  --color-tertiary: #444;
- --color-primary-darker: #4bbb7d;
- --color-secondary-darker: #ffbb00;
- --color-tertiary-darker: #fd424b;
- --color-primary-opacity: #5ec5763a;
- --color-secondary-opacity: #ffcd0331;
- --color-tertiary-opacity: #ff58602d;
  --gradient-primary: linear-gradient(to top left, #f17c1e, #ffcb03);
  --changeCSS: 0;
  --changeHTML: 0;
@@ -22,6 +16,45 @@
 
 body {
  font-family: "Poppins", sans-serif;
+ background-image: linear-gradient(
+   135deg,
+   rgba(244, 244, 244, 0.07) 0%,
+   rgba(244, 244, 244, 0.07) 12.5%,
+   rgba(211, 211, 211, 0.07) 12.5%,
+   rgba(211, 211, 211, 0.07) 25%,
+   rgba(178, 178, 178, 0.07) 25%,
+   rgba(178, 178, 178, 0.07) 37.5%,
+   rgba(145, 145, 145, 0.07) 37.5%,
+   rgba(145, 145, 145, 0.07) 50%,
+   rgba(113, 113, 113, 0.07) 50%,
+   rgba(113, 113, 113, 0.07) 62.5%,
+   rgba(80, 80, 80, 0.07) 62.5%,
+   rgba(80, 80, 80, 0.07) 75%,
+   rgba(47, 47, 47, 0.07) 75%,
+   rgba(47, 47, 47, 0.07) 87.5%,
+   rgba(14, 14, 14, 0.07) 87.5%,
+   rgba(14, 14, 14, 0.07) 100%
+  ),
+  linear-gradient(
+   45deg,
+   rgba(236, 236, 236, 0.07) 0%,
+   rgba(236, 236, 236, 0.07) 12.5%,
+   rgba(210, 210, 210, 0.07) 12.5%,
+   rgba(210, 210, 210, 0.07) 25%,
+   rgba(183, 183, 183, 0.07) 25%,
+   rgba(183, 183, 183, 0.07) 37.5%,
+   rgba(157, 157, 157, 0.07) 37.5%,
+   rgba(157, 157, 157, 0.07) 50%,
+   rgba(130, 130, 130, 0.07) 50%,
+   rgba(130, 130, 130, 0.07) 62.5%,
+   rgba(104, 104, 104, 0.07) 62.5%,
+   rgba(104, 104, 104, 0.07) 75%,
+   rgba(77, 77, 77, 0.07) 75%,
+   rgba(77, 77, 77, 0.07) 87.5%,
+   rgba(51, 51, 51, 0.07) 87.5%,
+   rgba(51, 51, 51, 0.07) 100%
+  ),
+  linear-gradient(90deg, #ffffff, #ffffff);
 }
 html {
  scroll-behavior: smooth;
@@ -71,6 +104,7 @@ a:hover {
  border-radius: 10rem;
  cursor: pointer;
  padding: 1rem;
+ color: #444;
 }
 
 /* lOGO */
@@ -419,8 +453,6 @@ select:focus-visible {
 .operations {
  max-width: 100rem;
  margin: 6rem auto 0 auto;
-
- background-color: #fff;
 }
 
 .operations__tab-container {
@@ -432,11 +464,8 @@ select:focus-visible {
  margin-right: 2.5rem;
  transform: translateY(-50%);
 }
-
-.operations__tab span {
- margin-right: 1rem;
- font-weight: 600;
- display: inline-block;
+.operations__tab:hover {
+ opacity: 0.9;
 }
 
 .operations__tab--1 {
@@ -449,6 +478,7 @@ select:focus-visible {
 
 .operations__tab--active {
  transform: translateY(-66%);
+ background: var(--gradient-primary);
 }
 
 .operations__content {
@@ -461,8 +491,9 @@ select:focus-visible {
 
 .operations__content--active {
  display: flex;
- height: 300px;
- width: 50px;
+ align-items: center;
+ justify-content: center;
+ gap: 2rem;
 }
 
 .operations__header {
@@ -474,8 +505,15 @@ select:focus-visible {
 .operations__content p {
  grid-column: 2;
 }
+.operations__content--2 i {
+ color: var(--color-primary);
+}
 
 /* PROGRESS BAR */
+
+.section .name-progress {
+ font-size: 1.5rem;
+}
 .skill {
  margin: 20px;
  width: 160px;
@@ -496,6 +534,8 @@ select:focus-visible {
  height: 120px;
  width: 120px;
  border-radius: 50%;
+ color: #444;
+ font-size: 1.5rem;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -514,7 +554,10 @@ select:focus-visible {
  animation: animHTML 2s linear forwards;
 }
 
-.html-block svg {
+.html-block svg,
+.css-block svg,
+.js-block svg,
+.react-block svg {
  position: absolute;
  top: 0;
  left: 0;
@@ -528,12 +571,7 @@ select:focus-visible {
  stroke-dashoffset: 436;
  animation: animCSS 2s linear forwards;
 }
-.css-block svg {
- position: absolute;
- top: 0;
- left: 0;
- transform: rotate(-90deg);
-}
+
 .js-block circle {
  fill: none;
  stroke: url(#GradientColor);
@@ -542,12 +580,7 @@ select:focus-visible {
  stroke-dashoffset: 436;
  animation: animJS 2s linear forwards;
 }
-.js-block svg {
- position: absolute;
- top: 0;
- left: 0;
- transform: rotate(-90deg);
-}
+
 .react-block circle {
  fill: none;
  stroke: url(#GradientColor);
@@ -555,12 +588,6 @@ select:focus-visible {
  stroke-dasharray: 436;
  stroke-dashoffset: 436;
  animation: animREACT 2s linear forwards;
-}
-.react-block svg {
- position: absolute;
- top: 0;
- left: 0;
- transform: rotate(-90deg);
 }
 
 @keyframes animHTML {

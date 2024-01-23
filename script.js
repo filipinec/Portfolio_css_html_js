@@ -85,7 +85,7 @@ const progressBar = function (skillId, numOfCircle, num, timeForLoad) {
 progressBar("skill-1", 0, 90, 17);
 progressBar("skill-2", 0, 75, 20);
 progressBar("skill-3", 0, 65, 24);
-progressBar("skill-4", 0, 10, 60);
+progressBar("skill-4", 0, 10, 150);
 
 // /////////////////////////////////
 
